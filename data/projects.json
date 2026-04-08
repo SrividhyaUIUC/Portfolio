@@ -1,0 +1,42 @@
+[
+    {
+        "title": "TrafficVis",
+        "description": "A suite of interactive simulations designed for teaching the fundamental basics of transportation engineering, such as cumulative plots and traffic equilibrium.",
+        "tags": [
+            "Simulation",
+            "Education",
+            "Traffic Engineering"
+        ],
+        "link": ""
+    },
+    {
+        "title": "GTFS Segments",
+        "description": "A Python library developed to analyze bus stop spacings using General Transit Feed Specification (GTFS) data, widely used by transit agencies.",
+        "tags": [
+            "Python",
+            "Data Analysis",
+            "Public Transit"
+        ],
+        "link": ""
+    },
+    {
+        "title": "Ride-hailing Economics",
+        "description": "Ongoing studies on the taxation and market dynamics of ride-hailing services, including case studies of NYC.",
+        "tags": [
+            "Research",
+            "Economics",
+            "Ride-hailing"
+        ],
+        "link": ""
+    },
+    {
+        "title": "Multi-modal Traffic Stability",
+        "description": "Research focusing on the physics and economics of urban traffic using tools like the Macroscopic Fundamental Diagram (MFD).",
+        "tags": [
+            "Research",
+            "Traffic Flow",
+            "MFD"
+        ],
+        "link": ""
+    }
+]
