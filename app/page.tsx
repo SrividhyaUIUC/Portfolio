@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import profileData from "../data/profile.json";
-import { ArrowRight, FileText, Linkedin } from "lucide-react";
+import { ArrowRight, FileText, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 function ProfilePhoto({ className }: { className?: string }) {
@@ -31,9 +31,11 @@ function ProfilePhoto({ className }: { className?: string }) {
 }
 
 export default function Home() {
+    const primaryEmail = profileData.email.split(";")[0]?.trim();
+
     return (
         <div className="space-y-16">
-            {/* Single profile image in the DOM (avoids duplicate next/image + priority issues). Grid: mobile = name → photo → bio → actions; md = text column | photo spanning rows. */}
+            {/* Single profile image in the DOM (avoids duplicate next/image + priority issues). Grid: mobile = name ? photo ? bio ? actions; md = text column | photo spanning rows. */}
             <section className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] md:grid-rows-[auto_auto_auto] gap-y-6 gap-x-10 md:gap-x-16 pt-10">
                 <div className="space-y-2 md:col-start-1 md:row-start-1 min-w-0">
                     <h2 className="text-xl font-medium text-accent">Hello, I'm</h2>
@@ -77,6 +79,15 @@ export default function Home() {
                         <Linkedin size={18} />
                         LinkedIn
                     </a>
+                    {primaryEmail && (
+                        <a
+                            href={`mailto:${primaryEmail}`}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-text-primary border border-slate-200 rounded-full hover:bg-slate-50 transition-all shadow-sm hover:shadow-md"
+                        >
+                            <Mail size={18} />
+                            {primaryEmail}
+                        </a>
+                    )}
                     <Link
                         href="/publications"
                         className="inline-flex items-center gap-2 px-5 py-2.5 text-accent hover:text-blue-600 font-medium transition-colors group"
