@@ -26,6 +26,17 @@ function ProfilePhoto({ className }: { className?: string }) {
                     sizes="(max-width: 640px) 14rem, (max-width: 768px) 16rem, 20rem"
                 />
             </div>
+            {/* Official Illinois Badge */}
+            <div className="absolute -bottom-1 -right-1 w-20 h-20 bg-white rounded-full border-4 border-white flex items-center justify-center shadow-lg overflow-hidden p-2">
+                <div className="relative w-full h-full">
+                    <Image
+                        src="/Illinois_logo_fullcolor_rgb.png"
+                        alt="University of Illinois Logo"
+                        fill
+                        className="object-contain"
+                    />
+                </div>
+            </div>
         </div>
     );
 }
