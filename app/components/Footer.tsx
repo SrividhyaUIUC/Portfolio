@@ -19,6 +19,11 @@ export default function Footer() {
                                 LinkedIn
                             </a>
                         )}
+                        {profileData.social.github && (
+                            <a href={profileData.social.github} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-primary transition-colors">
+                                GitHub
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>

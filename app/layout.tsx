@@ -7,8 +7,13 @@ import Footer from './components/Footer';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-    title: 'Ayush Pandey | Transportation Engineering Researcher',
-    description: 'Personal academic website of Ayush Pandey, Postdoctoral Scholar at UIUC.',
+    title: 'Srividhya Sridhar | Soft Solids, Fracture & Fractography',
+    description:
+        'Personal academic website of Srividhya Sridhar, Ph.D. candidate in Mechanical Science and Engineering at UIUC.',
+    robots: {
+        index: false,
+        follow: false,
+    },
 };
 
 export default function RootLayout({

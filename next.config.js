@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
-const repo = "about-me";
-
+// For GitHub Project Pages, set repo name and uncomment basePath + assetPrefix:
+// const repo = "your-repo-name";
 const nextConfig = {
-    output: "export", // Enable static export for GitHub Pages
+    output: "export",
     images: {
-        unoptimized: true, // Required for static export
+        unoptimized: true,
     },
-    basePath: `/${repo}`,
-    assetPrefix: `/${repo}/`,
+    // basePath: `/${repo}`,
+    // assetPrefix: `/${repo}/`,
 };
 
 module.exports = nextConfig;

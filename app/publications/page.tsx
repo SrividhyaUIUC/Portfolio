@@ -9,7 +9,8 @@ export default function PublicationsPage() {
             <div className="space-y-4">
                 <h1 className="text-3xl font-bold text-primary">Publications</h1>
                 <p className="text-text-secondary">
-                    Selected publications and research papers. Click on a paper to view its abstract.
+                    Publications, preprints, and presentations from BibTeX (<code className="text-sm bg-slate-100 px-1 rounded">data/publications/mypubs.bib</code>
+                    ). Entries with an abstract can be expanded.
                 </p>
             </div>
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
 import profileData from "../data/profile.json";
-import { ArrowRight, FileText, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, FileText, Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 function ProfilePhoto({ className }: { className?: string }) {
@@ -43,7 +43,8 @@ export default function Home() {
                         {profileData.name}
                     </h1>
                     <p className="text-xl text-text-secondary font-light">
-                        {profileData.title} at {profileData.affiliation}
+                        {profileData.title}
+                        {profileData.department ? `, ${profileData.department}` : ""} · {profileData.affiliation}
                     </p>
                 </div>
 
@@ -61,24 +62,39 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-wrap gap-4 pt-4 md:col-start-1 md:row-start-3 md:pt-0">
-                    <a
-                        href={profileData.social.scholar}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                    >
-                        <FileText size={18} />
-                        Google Scholar
-                    </a>
-                    <a
-                        href={profileData.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-text-primary border border-slate-200 rounded-full hover:bg-slate-50 transition-all shadow-sm hover:shadow-md"
-                    >
-                        <Linkedin size={18} />
-                        LinkedIn
-                    </a>
+                    {profileData.social.scholar ? (
+                        <a
+                            href={profileData.social.scholar}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-full hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                        >
+                            <FileText size={18} />
+                            Google Scholar
+                        </a>
+                    ) : null}
+                    {profileData.social.linkedin ? (
+                        <a
+                            href={profileData.social.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-text-primary border border-slate-200 rounded-full hover:bg-slate-50 transition-all shadow-sm hover:shadow-md"
+                        >
+                            <Linkedin size={18} />
+                            LinkedIn
+                        </a>
+                    ) : null}
+                    {profileData.social.github ? (
+                        <a
+                            href={profileData.social.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-text-primary border border-slate-200 rounded-full hover:bg-slate-50 transition-all shadow-sm hover:shadow-md"
+                        >
+                            <Github size={18} />
+                            GitHub
+                        </a>
+                    ) : null}
                     {primaryEmail && (
                         <a
                             href={`mailto:${primaryEmail}`}
@@ -89,10 +105,10 @@ export default function Home() {
                         </a>
                     )}
                     <Link
-                        href="/publications"
+                        href="/projects"
                         className="inline-flex items-center gap-2 px-5 py-2.5 text-accent hover:text-blue-600 font-medium transition-colors group"
                     >
-                        View Publications
+                        Ongoing Projects
                         <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>

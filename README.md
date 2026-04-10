@@ -1,62 +1,35 @@
-# Personal Academic Website
+# Srividhya Sridhar — Academic Website
 
-This is a personal academic website built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). It is designed to be easy to manage and looks professional.
+Personal academic site built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Content is driven by JSON and BibTeX so you can update the site without editing React code.
 
-## 🚀 Getting Started
+## Getting started
 
-### 1. Install Node.js
-You need Node.js installed to run this site.
-- Download it here: [https://nodejs.org/](https://nodejs.org/) (Choose the LTS version).
-- After installing, restart your terminal/PowerShell.
+1. Install [Node.js](https://nodejs.org/) (LTS).
+2. In this folder, run `npm install`.
+3. Run `npm run dev` and open [http://localhost:3000](http://localhost:3000).
 
-### 2. Install Dependencies
-Open your terminal (PowerShell) in this folder (`my-website`) and run:
-```bash
-npm install
-```
+## Editing content
 
-### 3. Run Locally
-To preview the site on your computer:
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Profile — `data/profile.json`
 
-## 📝 How to Edit Content
+Name, title, affiliation, department, bio, email, social links (`scholar`, `linkedin`, `github` — leave empty to hide buttons), and `avatar` (path under `public/`, e.g. `/profile.jpg` or `/profile.svg`).
 
-You do NOT need to touch the code to update your profile or papers. All content is in the `data/` folder.
+### Publications — `data/publications/mypubs.bib`
 
-### Edit Profile (`data/profile.json`)
-Update your name, bio, affiliation, and social links here.
+Add or edit BibTeX entries. The site reads `title`, `author`, `year`, `journal`, `booktitle`, `howpublished`, `note`, `doi`, and `url`. Venue text prefers `journal`, then `booktitle`, then `howpublished` / `note`.
 
-### Add Publications (`data/publications.json`)
-Add a new entry to the list:
-```json
-{
-  "title": "New Paper Title",
-  "authors": "Your Name, Co-author",
-  "venue": "Journal Name",
-  "year": "2024",
-  "link": "https://link-to-paper.com"
-}
-```
+### Projects — `data/projects.json`
 
-### Add Projects (`data/projects.json`)
-Add new projects with descriptions and tags.
+List of objects with `title`, `description`, `tags` (string array), and optional `link`.
 
-### Add Profile Photo
-1. Rename your photo to `profile.jpg`.
-2. Place it in the `public/` folder (overwrite the existing one if any, or just place it there).
-3. If you want to use a different name, update `data/profile.json` ("avatar": "/new-name.jpg").
+### Profile photo
 
-## 🌍 Deployment (GitHub Pages)
+Replace `public/profile.svg` with your own image (e.g. `profile.jpg`) and set `"avatar": "/profile.jpg"` in `data/profile.json`.
 
-To host this for free on GitHub:
+## Static export & GitHub Pages
 
-1. Create a repository on GitHub (e.g., `ayush-pandey-website`).
-2. Push this code to GitHub.
-3. Go to Repository Settings -> Pages.
-4. Set Source to `GitHub Actions`.
-5. GitHub will automatically build and deploy your site.
+The project uses `output: "export"` in `next.config.js`. For a **project site** (`username.github.io/repo-name/`), uncomment `basePath` and `assetPrefix` in `next.config.js` and set `repo` to your repository name. Build with `npm run build`; deploy the `out/` directory.
 
-(Note: You might need to set up a basic workflow file for Next.js if the default one isn't detected, but usually it works out of the box or Next.js provides one).
+## License
+
+Site content © Srividhya Sridhar. Code may be reused under the terms of your choice for personal academic sites.

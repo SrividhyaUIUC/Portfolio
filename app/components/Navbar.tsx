@@ -6,11 +6,13 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import clsx from "clsx";
+import profileData from "../../data/profile.json";
 
 const navItems = [
     { name: "Home", path: "/" },
-    { name: "Publications", path: "/publications" },
     { name: "Projects", path: "/projects" },
+    { name: "Publications", path: "/publications" },
+    { name: "Awards", path: "/awards" },
 ];
 
 export default function Navbar() {
@@ -23,7 +25,7 @@ export default function Navbar() {
                 <div className="relative z-10 flex justify-between h-16 items-center bg-background">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="text-xl font-bold text-primary tracking-tight h-full flex items-center">
-                            Ayush Pandey
+                            {profileData.name}
                         </Link>
                     </div>
 

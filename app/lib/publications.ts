@@ -24,7 +24,14 @@ export function getPublications(): Publication[] {
             }
 
             const venue =
-                entry.journal || entry.booktitle || entry.school || entry.publisher || entry.type || "N/A";
+                entry.journal ||
+                entry.booktitle ||
+                entry.howpublished ||
+                entry.note ||
+                entry.school ||
+                entry.publisher ||
+                entry.type ||
+                "N/A";
 
             return {
                 slug: entry.citationKey,

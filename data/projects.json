@@ -1,41 +1,85 @@
 [
     {
-        "title": "TrafficVis",
-        "description": "A suite of interactive simulations designed for teaching the fundamental basics of transportation engineering, such as cumulative plots and traffic equilibrium.",
+        "title": "Revealing the truth with surface metrics: measurement of unknown, multi-scale soft surfaces",
+        "description": "Established a rigorous framework using laser scanning confocal microscopy to accurately measure and characterize the complex, multi-scale textures of soft solids. This provides a roadmap to revealing true cut surface topographies.",
         "tags": [
-            "Simulation",
-            "Education",
-            "Traffic Engineering"
+            "Soft matter",
+            "Fracture",
+            "Surface roughness",
+            "Optical profilometry"
+        ],
+        "link": "/SoftSurfaceTomographyPaper.pdf"
+    },
+    {
+        "title": "Fractography: Multiscale, quantitative isnights into soft material failure.",
+        "description": "Fractured surfaces provides a window into the dynamics of failure. This work uses the developed fractographic tool to extract quantitative metrics from fractured surfaces to understand the physics of failure. Using experimental and computational explanations, a new framework about the failure of soft solids is explored.",
+        "tags": [
+            "Fractography",
+            "Soft fracture mechanics",
+            "Cutting mechanics",
+            "Finite element modeling"
+        ],
+        "link": "/2026_AdhSoc_Fractography_Peebles_Talk.pdf"
+    },
+    {
+        "title": "Cutting of highly deformable tough materials.",
+        "description": "Unlike soft elastomers like commonly used silicones, some materials (highly entangled hydrogels and tougher silicones) possess both high toughness and undergo large deformations. This work explores the cutting mechanics of such materials.",
+        "tags": [
+            "Soft fracture mechanics",
+            "Cutting mechanics",
+            "Large deformation",
+            "Nonlinear elasticity"
+        ],
+        "link": "/Sri_SES23_Talk.pdf"
+    },
+    {
+        "title": "Exploring fracture-friction coupling with needle insertion",
+        "description": "Investigating how fracture and friction are fundamentally coupled during needle insertion into soft tissues. This work explores how newly fractured surfaces create frictional interfaces that feed back into mechanical response—a relationship that is critical for surgical needle design and robotic insertion control.",
+        "tags": [
+            "Needle insertion",
+            "Soft solids",
+            "Friction",
+            "Surface roughness"
+        ],
+        "link": "/2026_AdhSoc_Poster.pdf"
+    },
+    {
+        "title": "Protorheology & Mullins effect",
+        "description": "Course project (TAM 534): using protorheology to demonstrate Mullins damage in solid elastomers.",
+        "tags": [
+            "Rheology",
+            "Damage mechanics",
+            "Coursework"
+        ],
+        "link": "/TAM534_ss154_Final_Project_ecoflex.pdf"
+    },
+    {
+        "title": "Constitutive modeling of soft materials",
+        "description": "Course project (TAM 598): constitutive models to characterize highly deformable soft materials and connect to fracture behavior.",
+        "tags": [
+            "Constitutive modeling",
+            "Soft solids",
+            "Coursework"
         ],
         "link": ""
     },
     {
-        "title": "GTFS Segments",
-        "description": "A Python library developed to analyze bus stop spacings using General Transit Feed Specification (GTFS) data, widely used by transit agencies.",
+        "title": "Fetal membrane mechanics review",
+        "description": "Review (ME 482) on mechanical properties of the fetal membrane in the context of rupture.",
         "tags": [
-            "Python",
-            "Data Analysis",
-            "Public Transit"
+            "Biomechanics",
+            "Review",
+            "Coursework"
         ],
         "link": ""
     },
     {
-        "title": "Ride-hailing Economics",
-        "description": "Ongoing studies on the taxation and market dynamics of ride-hailing services, including case studies of NYC.",
+        "title": "Digital Scholars ECE camp",
+        "description": "Summer 2024 instructor for DPI Chicago / UIUC: curriculum, Arduino robot capstone, and mentoring for high school participants.",
         "tags": [
-            "Research",
-            "Economics",
-            "Ride-hailing"
-        ],
-        "link": ""
-    },
-    {
-        "title": "Multi-modal Traffic Stability",
-        "description": "Research focusing on the physics and economics of urban traffic using tools like the Macroscopic Fundamental Diagram (MFD).",
-        "tags": [
-            "Research",
-            "Traffic Flow",
-            "MFD"
+            "Outreach",
+            "Teaching",
+            "ECE"
         ],
         "link": ""
     }

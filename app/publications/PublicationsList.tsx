@@ -24,8 +24,17 @@ export default function PublicationsList({ publications }: { publications: Publi
                     className="content-card overflow-hidden transition-shadow hover:shadow-md"
                 >
                     <div
-                        className="cursor-pointer p-6"
-                        onClick={() => pub.slug && toggleExpand(pub.slug)}
+                        className={clsx("p-6", pub.abstract && pub.slug && "cursor-pointer")}
+                        onClick={() => pub.abstract && pub.slug && toggleExpand(pub.slug)}
+                        role={pub.abstract ? "button" : undefined}
+                        tabIndex={pub.abstract ? 0 : undefined}
+                        onKeyDown={(e) => {
+                            if (!pub.abstract || !pub.slug) return;
+                            if (e.key === "Enter" || e.key === " ") {
+                                e.preventDefault();
+                                toggleExpand(pub.slug);
+                            }
+                        }}
                     >
                         <div className="flex justify-between items-start gap-4">
                             <div className="min-w-0 flex-1 space-y-2">
@@ -40,10 +49,12 @@ export default function PublicationsList({ publications }: { publications: Publi
                                         {pub.year}
                                     </span>
                                     <span className="text-slate-700">{pub.venue}</span>
-                                    <span className="flex items-center gap-1 text-xs font-medium text-slate-600">
-                                        {expandedId === pub.slug ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                                        {expandedId === pub.slug ? "Hide Abstract" : "Abstract"}
-                                    </span>
+                                    {pub.abstract ? (
+                                        <span className="flex items-center gap-1 text-xs font-medium text-slate-600">
+                                            {expandedId === pub.slug ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                                            {expandedId === pub.slug ? "Hide abstract" : "Abstract"}
+                                        </span>
+                                    ) : null}
                                 </div>
                             </div>
 

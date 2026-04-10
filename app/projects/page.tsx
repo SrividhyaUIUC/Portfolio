@@ -9,7 +9,7 @@ export default function Projects() {
             <div className="space-y-4">
                 <h1 className="text-3xl font-bold text-primary">Projects & Research</h1>
                 <p className="text-text-secondary">
-                    Current and past research projects, tools, and software.
+                    These projects are currently in progress, with most of the experiments done and manuscript being written and will be published soon!
                 </p>
             </div>
 
