@@ -16,7 +16,7 @@ function ProfilePhoto({ className }: { className?: string }) {
             )}
         >
             <div className="absolute inset-0 bg-gradient-to-tr from-orange/20 to-primary/20 rounded-full blur-3xl transform rotate-6 scale-110 -z-10" />
-            <div className="w-full h-full rounded-full bg-white border-[6px] border-primary shadow-2xl overflow-hidden relative">
+            <div className="w-full h-full rounded-full bg-white border-4 border-primary shadow-2xl overflow-hidden relative">
                 <Image
                     src={profileData.avatar}
                     alt={profileData.name}
@@ -25,10 +25,6 @@ function ProfilePhoto({ className }: { className?: string }) {
                     priority
                     sizes="(max-width: 640px) 14rem, (max-width: 768px) 16rem, 20rem"
                 />
-            </div>
-            {/* Accent badge */}
-            <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-orange rounded-full border-4 border-white flex items-center justify-center shadow-lg transform rotate-12">
-                <div className="text-white font-bold text-xl leading-none">I</div>
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ export default function Awards() {
             <div className="space-y-4">
                 <h1 className="text-3xl font-bold text-primary">Awards & Recognitions</h1>
                 <p className="text-text-secondary">
-                    Select highlights of academic achievements, presentations, and fellowships—editable in <code className="text-sm bg-slate-100 px-1 rounded">data/awards.json</code>.
+                    Select highlights of academic achievements, presentations, and fellowships.
                 </p>
             </div>
 
@@ -27,7 +27,7 @@ export default function Awards() {
                                     {award.year}
                                 </span>
                             </div>
-                            
+
                             <h2 className="mb-3 text-2xl font-bold leading-tight text-primary group-hover:text-accent-teal transition-colors">
                                 {award.title}
                             </h2>
