@@ -23,7 +23,7 @@ export default function Projects() {
 
                         <div className="flex flex-1 flex-col p-6">
                             <div className="mb-4 flex items-start justify-between gap-3">
-                                <h2 className="text-2xl font-bold leading-tight text-primary group-hover:text-orange transition-colors">
+                                <h2 className="text-2xl font-bold leading-tight text-primary group-hover:text-accent-light-orange transition-colors">
                                     {project.title}
                                 </h2>
                                 {project.link && (

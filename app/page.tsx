@@ -38,7 +38,10 @@ export default function Home() {
     const primaryEmail = profileData.email.split(";")[0]?.trim();
 
     return (
-        <div className="space-y-16">
+        <div className="space-y-16 relative">
+            <div className="absolute top-0 -left-1/4 w-full h-[500px] bg-primary/5 rounded-full blur-[120px] -z-20 opacity-50" />
+            <div className="absolute top-40 -right-1/4 w-full h-[500px] bg-orange/5 rounded-full blur-[120px] -z-20 opacity-50" />
+            
             <section className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_auto] md:grid-rows-[auto_auto_auto] gap-y-6 gap-x-10 md:gap-x-16 pt-10">
                 <div className="space-y-4 md:col-start-1 md:row-start-1 min-w-0">
                     <div>

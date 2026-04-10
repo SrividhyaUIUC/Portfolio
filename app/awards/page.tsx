@@ -28,7 +28,7 @@ export default function Awards() {
                                 </span>
                             </div>
                             
-                            <h2 className="mb-3 text-2xl font-bold leading-tight text-primary group-hover:text-orange transition-colors">
+                            <h2 className="mb-3 text-2xl font-bold leading-tight text-primary group-hover:text-accent-teal transition-colors">
                                 {award.title}
                             </h2>
 
