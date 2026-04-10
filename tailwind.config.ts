@@ -7,12 +7,17 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: "#0f172a", // Slate 900
-                secondary: "#334155", // Slate 700
-                accent: "#3b82f6", // Blue 500
-                background: "#f8fafc", // Slate 50
-                "text-primary": "#1e293b", // Slate 800
-                "text-secondary": "#64748b", // Slate 500
+                primary: "#132D4B",      // Illinois Dark Blue
+                orange: "#E84A27",       // Illinois Orange
+                gray: "#707372",         // Illinois Gray
+                "accent-yellow": "#FEE951",
+                "accent-teal": "#27CFF9",
+                "accent-blue": "#016FB9",
+                "accent-light-orange": "#E3A535",
+                background: "#ffffff",   // Clean white background
+                "text-primary": "#132D4B", // Dark Blue for text
+                "text-secondary": "#707372", // Gray for secondary text
+                accent: "#E84A27",       // Default accent to Orange
             },
             fontFamily: {
                 sans: ['var(--font-inter)', 'sans-serif'],

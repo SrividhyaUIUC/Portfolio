@@ -11,19 +11,22 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply tracking-tight font-bold;
+  @apply tracking-tight font-bold text-primary;
+}
+
+/* Illini Brand Gradient */
+.brand-gradient {
+  @apply bg-gradient-to-br from-primary via-primary to-orange;
 }
 
 /* Glassmorphism utility */
 .glass {
   @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
-  /* Dark mode variant if needed */
-  @apply dark:bg-slate-900/70 dark:border-slate-700/30;
 }
 
-/* Listing cards — soft cool tint (not pure white), readable on slate page bg */
+/* Listing cards — clean white with brand accents */
 .content-card {
-  @apply rounded-xl border border-blue-100 bg-blue-50 shadow-sm;
+  @apply rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-shadow;
 }
 
 /* Custom scrollbar */

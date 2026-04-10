@@ -17,13 +17,13 @@ export default function Projects() {
                 {projectsData.map((project, index) => (
                     <div
                         key={index}
-                        className="content-card flex h-full flex-col overflow-hidden transition-shadow hover:shadow-md"
+                        className="content-card flex h-full flex-col overflow-hidden group"
                     >
-                        <div className="h-1.5 bg-gradient-to-r from-blue-500 to-indigo-600" />
+                        <div className="h-2 bg-gradient-to-r from-accent-light-orange to-accent-yellow transition-all group-hover:h-3" />
 
                         <div className="flex flex-1 flex-col p-6">
                             <div className="mb-4 flex items-start justify-between gap-3">
-                                <h2 className="text-xl font-bold leading-snug text-slate-900">
+                                <h2 className="text-2xl font-bold leading-tight text-primary group-hover:text-orange transition-colors">
                                     {project.title}
                                 </h2>
                                 {project.link && (
@@ -31,14 +31,14 @@ export default function Projects() {
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="shrink-0 text-slate-500 transition-colors hover:text-blue-600"
+                                        className="shrink-0 p-2 rounded-lg bg-primary/5 text-primary transition-all hover:bg-orange hover:text-white"
                                     >
                                         <ExternalLink size={20} />
                                     </a>
                                 )}
                             </div>
 
-                            <p className="mb-6 flex-1 text-base leading-relaxed text-slate-700">
+                            <p className="mb-6 flex-1 text-base leading-relaxed text-text-primary/80 font-normal">
                                 {project.description}
                             </p>
 
@@ -46,7 +46,7 @@ export default function Projects() {
                                 {project.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-800"
+                                        className="rounded-lg bg-accent-yellow/30 px-2.5 py-1 text-xs font-bold text-primary border border-accent-yellow/50"
                                     >
                                         {tag}
                                     </span>

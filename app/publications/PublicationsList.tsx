@@ -24,7 +24,7 @@ export default function PublicationsList({ publications }: { publications: Publi
                     className="content-card overflow-hidden transition-shadow hover:shadow-md"
                 >
                     <div
-                        className={clsx("p-6", pub.abstract && pub.slug && "cursor-pointer")}
+                        className={clsx("p-6 hover:bg-primary/5 transition-colors group", pub.abstract && pub.slug && "cursor-pointer")}
                         onClick={() => pub.abstract && pub.slug && toggleExpand(pub.slug)}
                         role={pub.abstract ? "button" : undefined}
                         tabIndex={pub.abstract ? 0 : undefined}
@@ -38,21 +38,21 @@ export default function PublicationsList({ publications }: { publications: Publi
                     >
                         <div className="flex justify-between items-start gap-4">
                             <div className="min-w-0 flex-1 space-y-2">
-                                <h2 className="text-lg font-semibold leading-tight text-slate-900">
+                                <h2 className="text-xl font-bold leading-tight text-primary group-hover:text-orange transition-colors">
                                     {pub.title}
                                 </h2>
-                                <p className="text-sm leading-snug text-slate-700">
+                                <p className="text-base leading-snug text-text-primary/70">
                                     {pub.authors}
                                 </p>
-                                <div className="flex flex-wrap items-center gap-2 gap-y-1 text-sm text-slate-600">
-                                    <span className="rounded-md bg-blue-100 px-2 py-0.5 font-semibold tabular-nums text-blue-950">
+                                <div className="flex flex-wrap items-center gap-2 gap-y-1 text-sm text-gray">
+                                    <span className="rounded-md bg-accent-blue/10 px-2 py-0.5 font-bold tabular-nums text-accent-blue border border-accent-blue/20">
                                         {pub.year}
                                     </span>
-                                    <span className="text-slate-700">{pub.venue}</span>
+                                    <span className="font-semibold text-primary/60 italic">{pub.venue}</span>
                                     {pub.abstract ? (
-                                        <span className="flex items-center gap-1 text-xs font-medium text-slate-600">
+                                        <span className="flex items-center gap-1 text-xs font-bold text-orange">
                                             {expandedId === pub.slug ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
-                                            {expandedId === pub.slug ? "Hide abstract" : "Abstract"}
+                                            {expandedId === pub.slug ? "HIDE ABSTRACT" : "ABSTRACT"}
                                         </span>
                                     ) : null}
                                 </div>
@@ -63,11 +63,11 @@ export default function PublicationsList({ publications }: { publications: Publi
                                     href={pub.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-blue-600"
+                                    className="rounded-xl p-2.5 bg-primary/5 text-primary transition-all hover:bg-orange hover:text-white shadow-sm"
                                     title="View Paper"
                                     onClick={(e) => e.stopPropagation()}
                                 >
-                                    <ExternalLink size={20} />
+                                    <ExternalLink size={22} />
                                 </a>
                             )}
                         </div>
@@ -80,9 +80,9 @@ export default function PublicationsList({ publications }: { publications: Publi
                                 animate={{ height: "auto", opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
                                 transition={{ duration: 0.2 }}
-                                className="border-t border-blue-100 bg-blue-100/50"
+                                className="border-t border-primary/5 bg-primary/5"
                             >
-                                <div className="p-6 pt-3 text-sm leading-relaxed text-slate-800">
+                                <div className="p-6 pt-3 text-sm leading-relaxed text-text-primary/90 font-light">
                                     <p>{pub.abstract}</p>
                                 </div>
                             </motion.div>

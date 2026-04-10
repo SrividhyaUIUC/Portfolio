@@ -20,9 +20,9 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 inset-x-0 w-full z-[9999] border-b border-slate-200/80 bg-background shadow-sm isolate">
+        <nav className="fixed top-0 inset-x-0 w-full z-[9999] border-b border-primary/10 bg-white/80 backdrop-blur-md shadow-sm isolate">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="relative z-10 flex justify-between h-16 items-center bg-background">
+                <div className="relative z-10 flex justify-between h-16 items-center">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="text-xl font-bold text-primary tracking-tight h-full flex items-center">
                             {profileData.name}
@@ -38,10 +38,10 @@ export default function Navbar() {
                                     key={item.path}
                                     href={item.path}
                                     className={clsx(
-                                        "inline-flex items-center px-1 pt-1 text-sm font-medium transition-colors border-b-2",
+                                        "inline-flex items-center px-1 pt-1 text-sm font-semibold transition-colors border-b-2",
                                         isActive
-                                            ? "border-accent text-accent"
-                                            : "border-transparent text-text-secondary hover:text-primary hover:border-slate-300"
+                                            ? "border-orange text-orange"
+                                            : "border-transparent text-text-secondary hover:text-primary hover:border-primary/20"
                                     )}
                                 >
                                     {item.name}
