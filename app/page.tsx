@@ -107,9 +107,3 @@ export default function Home() {
         </div>
     );
 }
-            </section>
-
-            {/* Featured / Quick Links area could go here */}
-        </div>
-    );
-}
